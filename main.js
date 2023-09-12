@@ -28,7 +28,7 @@ buscar.addEventListener('click', async () => {
     
     // Validar si se ha ingresado un número
     if (!id || isNaN(id)) {
-        mostrarError("Por favor, ingresa un número válido.");
+        mostrarError("Por favor, ingresa un número.");
         return;
     }
 
@@ -36,7 +36,7 @@ buscar.addEventListener('click', async () => {
 
     // Validar si el Pokémon no existe
     if (!data) {
-        mostrarError("No hay datos para ese número.");
+        mostrarError("No hay un pokemon con ese id.");
         return;
     }
 
@@ -49,6 +49,7 @@ const mostrarError = (mensaje) => {
     contenedor.innerHTML = `
     <div class="error">
         <h2>${mensaje}</h2>
+        <img id="pokebola" src="imagen/pokebola.png" alt="" srcset="">
     </div>`;
 };
 
